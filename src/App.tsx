@@ -1,11 +1,11 @@
 import React from "react";
-import ExchangeRates from './ExchangeRates';
+import Books from "./Books";
 
 function App() {
   return (
     <div className="App">
       🚀Apollo graphql starter
-      <ExchangeRates />
+      <Books />
     </div>
   );
 }
