@@ -6,8 +6,8 @@ function App() {
   return (
     <div className="App">
       🚀Apollo graphql starter
-      <Books />
       <BookForm />
+      <Books />
     </div>
   );
 }

@@ -7,8 +7,8 @@ const Books: React.FC = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
 
-  return data.books.map((book: BookItem, index: number) => (
-    <div key={index}>
+  return data.books.map((book: BookItem) => (
+    <div key={book.id}>
       <h2>{book.title}</h2>
       <p>{book.author}</p>
     </div>

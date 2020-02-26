@@ -1,6 +1,7 @@
 import { gql } from "apollo-boost";
 
 export interface BookItem {
+  id: number;
   title: string;
   author: string;
 }
@@ -8,6 +9,7 @@ export interface BookItem {
 export const BOOKS = gql`
   {
     books {
+      id
       title
       author
     }
