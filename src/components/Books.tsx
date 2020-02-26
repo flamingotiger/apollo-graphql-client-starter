@@ -1,6 +1,6 @@
 import React from "react";
 import { useQuery } from "@apollo/react-hooks";
-import { BookItem, BOOKS } from "./query/books";
+import { BookItem, BOOKS } from "../query/books";
 
 const Books: React.FC = () => {
   const { loading, error, data } = useQuery(BOOKS);

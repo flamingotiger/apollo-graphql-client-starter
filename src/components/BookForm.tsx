@@ -1,6 +1,6 @@
 import React, { ChangeEvent, FormEvent } from "react";
 import { useMutation } from "@apollo/react-hooks";
-import { ADD_BOOK } from "./query/books";
+import { ADD_BOOK } from "../query/books";
 
 const BookForm: React.FC = () => {
   const [title, setTitle] = React.useState("");
