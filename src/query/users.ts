@@ -17,7 +17,6 @@ export const USERS = gql`
       jobTitle
       email
       username
-      password
     }
   }
 `;
