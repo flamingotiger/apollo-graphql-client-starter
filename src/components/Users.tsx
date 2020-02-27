@@ -1,6 +1,6 @@
 import React from "react";
 import { useQuery } from "@apollo/react-hooks";
-import { User, USERS } from "../query/users";
+import { User, USERS } from "../query/user";
 
 const Users: React.FC = () => {
   const { loading, error, data } = useQuery(USERS);
@@ -10,10 +10,7 @@ const Users: React.FC = () => {
     <ul>
       {data.users.map((user: User) => (
         <li key={user.id}>
-          <img src={user.image} alt={user.username + "image"} />
-          <p>{user.email}</p>
-          <p>{user.jobTitle}</p>
-          <p>{user.username}</p>
+          <p>{user.name}</p>
         </li>
       ))}
     </ul>

@@ -1,6 +1,6 @@
 import React from "react";
-import Books from "./components/Books";
-import BookForm from "./components/BookForm";
+import Posts from "./components/Posts";
+import PostForm from "./components/PostForm";
 import Users from "./components/Users";
 
 function App() {
@@ -8,8 +8,8 @@ function App() {
     <div className="App">
       <h1>🚀Apollo graphql starter</h1>
       <h2>Book List</h2>
-      <BookForm />
-      <Books />
+      <PostForm />
+      <Posts />
       <h2>User List</h2>
       <Users />
     </div>

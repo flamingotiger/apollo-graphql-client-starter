@@ -1,11 +1,11 @@
 import React, { ChangeEvent, FormEvent } from "react";
 import { useMutation } from "@apollo/react-hooks";
-import { ADD_BOOK } from "../query/books";
+import { ADD_POST } from "../query/post";
 
-const BookForm: React.FC = () => {
+const PostForm: React.FC = () => {
   const [title, setTitle] = React.useState("");
   const [author, setAuthor] = React.useState("");
-  const [addBook] = useMutation(ADD_BOOK);
+  const [addBook] = useMutation(ADD_POST);
   return (
     <form
       onSubmit={(e: FormEvent<HTMLFormElement>) => {
@@ -13,7 +13,7 @@ const BookForm: React.FC = () => {
         addBook({ variables: { title, author } });
       }}
     >
-      <h3>BookForm</h3>
+      <h3>PostForm</h3>
       <label>Title</label>
       <input
         type="text"
@@ -35,4 +35,4 @@ const BookForm: React.FC = () => {
   );
 };
 
-export default BookForm;
+export default PostForm;
