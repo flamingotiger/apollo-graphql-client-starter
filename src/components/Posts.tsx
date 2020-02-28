@@ -1,6 +1,6 @@
 import React from "react";
 import { useQuery } from "@apollo/react-hooks";
-import { PostItem, POSTS } from "../query/post";
+import { PostItem, POSTS } from "../schema/post";
 
 const Posts: React.FC = () => {
   const { loading, error, data } = useQuery(POSTS);

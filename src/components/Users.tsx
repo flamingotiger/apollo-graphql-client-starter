@@ -1,6 +1,6 @@
 import React from "react";
 import { useQuery } from "@apollo/react-hooks";
-import { User, USERS } from "../query/user";
+import { User, USERS } from "../schema/user";
 
 const Users: React.FC = () => {
   const { loading, error, data } = useQuery(USERS);

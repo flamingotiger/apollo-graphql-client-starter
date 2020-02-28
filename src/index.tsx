@@ -2,11 +2,19 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import ApolloClient from "apollo-boost";
+import ApolloClient, { Operation } from "apollo-boost";
 import { ApolloProvider } from "@apollo/react-hooks";
 
 const client = new ApolloClient({
-    uri: "http://localhost:5000/graphql"
+  uri: "http://localhost:5000/graphql",
+  request: (operation: Operation) => {
+    const token = localStorage.getItem("token");
+    operation.setContext({
+      headers: {
+        authorization: token ? token : ""
+      }
+    });
+  }
 });
 
 ReactDOM.render(

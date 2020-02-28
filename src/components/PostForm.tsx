@@ -1,6 +1,6 @@
 import React, { ChangeEvent, FormEvent } from "react";
 import { useMutation } from "@apollo/react-hooks";
-import { ADD_POST } from "../query/post";
+import { ADD_POST } from "../schema/post";
 
 const PostForm: React.FC = () => {
   const [title, setTitle] = React.useState("");
