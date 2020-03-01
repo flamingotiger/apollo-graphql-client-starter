@@ -3,8 +3,8 @@ import { useLazyQuery } from "@apollo/react-hooks";
 import { AUTH_LOGIN } from "../schema/user";
 
 const Login: React.FC = () => {
-  const [name, setName] = React.useState("");
-  const [password, setPassword] = React.useState("");
+  const [name, setName] = React.useState("hong");
+  const [password, setPassword] = React.useState("pw");
   const [handleLogin, { data }] = useLazyQuery(AUTH_LOGIN, {
     variables: { name, password }
   });
