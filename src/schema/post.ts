@@ -14,9 +14,6 @@ export const POSTS = gql`
       id
       title
       content
-      author {
-        name
-      }
     }
   }
 `;

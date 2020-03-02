@@ -8,7 +8,7 @@ import { ApolloProvider } from "@apollo/react-hooks";
 const client = new ApolloClient({
   uri: "http://localhost:5000/graphql",
   request: (operation: Operation) => {
-    const token = localStorage.getItem("token");
+    const token = window.localStorage.getItem("token");
     operation.setContext({
       headers: {
         authorization: token ? token : ""

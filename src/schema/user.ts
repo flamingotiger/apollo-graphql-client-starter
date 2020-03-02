@@ -7,15 +7,13 @@ export interface User {
   posts: PostItem[];
 }
 
-export const USERS = gql`
+export const USER_ME = gql`
   query {
-    users {
-      id
+    me {
       name
-      posts
     }
   }
-`;
+`
 
 export const ADD_USER = gql`
   mutation {

@@ -4,13 +4,13 @@ import { ADD_POST } from "../schema/post";
 
 const PostForm: React.FC = () => {
   const [title, setTitle] = React.useState("");
-  const [author, setAuthor] = React.useState("");
+  const [content, setContent] = React.useState("");
   const [addBook] = useMutation(ADD_POST);
   return (
     <form
       onSubmit={(e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        addBook({ variables: { title, author } });
+        addBook({ variables: { title, content } });
       }}
     >
       <h3>PostForm</h3>
@@ -22,13 +22,13 @@ const PostForm: React.FC = () => {
         }
         value={title}
       />
-      <label>Author</label>
+      <label>Content</label>
       <input
         type="text"
         onChange={(e: ChangeEvent<HTMLInputElement>) =>
-          setAuthor(e.target.value)
+          setContent(e.target.value)
         }
-        value={author}
+        value={content}
       />
       <button type="submit">Submit</button>
     </form>
