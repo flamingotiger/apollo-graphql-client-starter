@@ -2,7 +2,7 @@ import React, { ChangeEvent, FormEvent } from "react";
 import { useLazyQuery } from "@apollo/react-hooks";
 import { AUTH_LOGIN } from "../schema/user";
 
-const Login: React.FC = () => {
+const Login: React.FC<{ setUser: () => void }> = ({ setUser }) => {
   const [name, setName] = React.useState("hong");
   const [password, setPassword] = React.useState("pw");
   const [handleLogin, { data }] = useLazyQuery(AUTH_LOGIN, {
@@ -36,7 +36,7 @@ const Login: React.FC = () => {
           setPassword(e.target.value)
         }
       />
-      <button>login</button>
+      <button type="submit">login</button>
     </form>
   );
 };
